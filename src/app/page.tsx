@@ -8,7 +8,7 @@ export default function Home() {
     <main className="bg-transparent">
       <section className="grid gap-2">
 
-        <Card className="w-full bg-gradient-to-b from-[#94b5fc]  bg-transparent bg-opacity-40 min-h-screen">
+        <Card className="w-full bg-gradient-to-b from-[#94b5fc] bg-transparent bg-opacity-40 min-h-screen">
           <CardHeader>
             <div className="flex items-center justify-center mt-32 w-full ">
               <CardTitle className="flex items-center justify-center select-none">

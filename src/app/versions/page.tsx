@@ -44,7 +44,7 @@ export default function Versions() {
         <div>
             <Card className="m-4 flex flex-col justify-center items-center">
                 <CardHeader>
-                    <h1 className="text-5xl mt-10 font-bold"> Download robok engine</h1>
+                    <h1 className="text-4xl mt-10 font-bold"> Download Robok</h1>
                 </CardHeader>
 
                 <CardContent>
@@ -54,7 +54,7 @@ export default function Versions() {
                                 Latest versions
                             </h3>
                         </CardTitle>
-                        <div className="flex gap-6 justify-center items-center">
+                        <div className="flex gap-6 justify-center mb-10 items-center">
                             <a href="#">
                                 <Button>
                                     <div className="flex items-center p-2 justify-center gap-2">
