@@ -3,7 +3,6 @@ import Codeclip from "@/components/code";
 import { Button } from "@/components/ui/button";
 import { FileBox, Github } from "lucide-react";
 
-
 export default function Home() {
   return (
     <main className="bg-transparent">
