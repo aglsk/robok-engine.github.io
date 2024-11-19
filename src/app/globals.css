@@ -34,6 +34,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
@@ -69,6 +70,12 @@ body {
 
   body {
     @apply bg-indigo-900 text-foreground;
+
+  }
+
+  main {
+    @apply bg-[url('/img/grid-bg.webp')] bg-cover bg-center;
+
   }
 
   :root {
@@ -88,4 +95,3 @@ body {
   }
 
 }
-

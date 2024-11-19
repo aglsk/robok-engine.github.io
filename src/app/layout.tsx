@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Sidebar } from '@/components/sidebar'
-import Search from '@/components/search'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Blog News",
-  description: "Blog de noticias",
+  title: "Robok Engine",
+  description: "mobile engine",
 };
 
 export default function RootLayout({
@@ -27,7 +25,6 @@ export default function RootLayout({
         )}
       >
         <Sidebar />
-        <Search />
         {children}
       </body>
     </html>
