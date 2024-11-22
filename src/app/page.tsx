@@ -1,5 +1,5 @@
+"use client"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import Codeclip from "@/components/code";
 import { Button } from "@/components/ui/button";
 import { FileBox, Github } from "lucide-react";
 
@@ -15,7 +15,7 @@ export default function Home() {
               <CardHeader>
                 <div className="flex items-center justify-center w-full ">
                   <CardTitle className="flex items-center justify-center select-none">
-                    <h1 className="text-5xl my-2 sm:text-6xl font-bold"> Robok Engine </h1>
+                    <h1 className="text-3xl my-2 sm:text-6xl font-bold"> Robok Engine </h1>
                   </CardTitle>
                 </div>
                 <CardDescription className="flex items-center  w-full">
@@ -61,7 +61,6 @@ export default function Home() {
 
 
         </Card>
-
 
       </section>
     </main>

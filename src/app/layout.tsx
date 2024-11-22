@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Robok Engine",
-  description: "mobile engine",
+  description: "Revolutionary engine for creating 3D Java games",
+ 
 };
 
 export default function RootLayout({
@@ -18,12 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          inter.className
-        )}
-      >
+      <body>
+  
+      
         <Sidebar />
         {children}
       </body>

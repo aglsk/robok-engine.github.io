@@ -3,13 +3,11 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { DialogTitle, } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input"
 import Link from "next/link";
 
 import {
     Home, Users,
     LeafyGreen,
-    Search,
     ArrowDownToLine,
     BookText,
     Pyramid,
