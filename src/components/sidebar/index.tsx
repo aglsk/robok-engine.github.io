@@ -1,7 +1,6 @@
 "use client"
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { DialogTitle, } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
@@ -10,7 +9,6 @@ import Link from "next/link";
 import {
     Home, Users,
     LeafyGreen,
-    SquareMenu,
     Search,
     ArrowDownToLine,
     BookText,
@@ -149,17 +147,6 @@ export function Sidebar() {
                             <div className="flex items-center w-full mx-auto">
                                 <h1 className="font-bold text-xl text-gray-900">Robok Engine</h1>
                             </div>
-
-                            <Input
-                                id="search"
-                                type="search"
-                                placeholder="Pesquisar..."
-                                className="bg-gray-200 text-gray-900"
-                            />
-
-                            <Button type="submit">
-                                <Search className="w-6 h-6" />
-                            </Button>
 
                         </div>
                     </div>
