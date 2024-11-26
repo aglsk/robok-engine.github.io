@@ -18,11 +18,7 @@ out/
 # Production
 /build
 
-# Firebase
-/firebase/
-.firebaserc
-.storage.rules
-.database.rules.json
+
 
 # Misc
 .DS_Store
