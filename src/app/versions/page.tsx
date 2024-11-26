@@ -19,12 +19,14 @@ import { Button } from "@/components/ui/button";
 export default function Versions() {
   const [versions, setVersions] = useState<any[]>([]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const fetchVersions = async () => {
       try {
         const versionsCollectionRef = collection(db, "versions");
         const versionsSnapshot = await getDocs(versionsCollectionRef);
-
+  
         const versionsData = versionsSnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
@@ -32,11 +34,14 @@ export default function Versions() {
         setVersions(versionsData);
       } catch (error) {
         console.error("Erro ao buscar dados das versões:", error);
+      } finally {
+        setIsLoading(false); // Carregamento concluído
       }
     };
-
+  
     fetchVersions();
   }, []);
+  
 
   return (
     <div>
