@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Robok Engine",
   description: "Revolutionary engine for creating 3D Java games",
- 
+
 };
 
 export default function RootLayout({
@@ -20,8 +20,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body>
-  
-      
         <Sidebar />
         {children}
       </body>
