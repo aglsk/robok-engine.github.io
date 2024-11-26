@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
@@ -32,7 +32,6 @@ export default function Versions() {
         setVersions(versionsData);
       } catch (error) {
         console.error("Erro ao buscar dados das versões:", error);
-        console.log("Subcoleção 'versions' chamada para o documento:",  Versions);
       }
     };
 
