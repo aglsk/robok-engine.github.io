@@ -24,13 +24,11 @@ export default function Versions() {
       try {
         const versionsCollectionRef = collection(db, "versions");
         const versionsSnapshot = await getDocs(versionsCollectionRef);
-        console.log("Documentos encontrados na coleção 'versions':", versionsSnapshot.docs);
 
         const versionsData = versionsSnapshot.docs.map((doc) => ({
           id: doc.id,
-          ...doc.data(), 
+          ...doc.data(),
         }));
-        
         setVersions(versionsData);
       } catch (error) {
         console.error("Erro ao buscar dados das versões:", error);
