@@ -72,14 +72,14 @@ export default function Versions() {
         </CardContent>
       </Card>
 
-      <Card className="max-sm:flex flex-col justify-center content-center items-center m-4">
+      <Card className="flex flex-col justify-center items-center m-4">
         <CardHeader>
-          <h1 className="text-xl font-bold">Versões Disponíveis</h1>
+          <h1 className="text-xl text-center font-bold">Versões Disponíveis</h1>
           <p>Lista de versões disponíveis para download.</p>
         </CardHeader>
 
-        <CardContent className="flex justify-center content-center items-center">
-          <Table>
+        <CardContent className="flex w-full">
+          <Table className="flex w-full flex-col items-center">
             <TableCaption>Versões disponíveis.</TableCaption>
             <TableHeader>
               <TableRow>
