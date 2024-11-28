@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"; // Import do Firestore
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBEYVGzmzmxE9R2JJKhvs32khSVoS3cszY",
-  authDomain: "robok-website.firebaseapp.com",
-  projectId: "robok-website",
-  storageBucket: "robok-website.firebasestorage.app",
-  messagingSenderId: "608417068126",
-  appId: "1:608417068126:web:4a27aa3cd9f35bef20b0cf",
+  apiKey: "NEXT_PUBLIC_FIREBASE_API_KEY",
+  authDomain: "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN",
+  projectId: "NEXT_PUBLIC_FIREBASE_PROJECT_ID",
+  storageBucket: "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET",
+  messagingSenderId: "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID",
+  appId: "NEXT_PUBLIC_FIREBASE_APP_ID",
 };
 
 // Inicializa o Firebase
