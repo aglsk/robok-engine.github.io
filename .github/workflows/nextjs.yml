@@ -55,7 +55,7 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
-      - name: Setup environment variables
+      - name: Export Firebase Environment Variables
         run: |
           echo "NEXT_PUBLIC_FIREBASE_API_KEY=${{ secrets.APIKEY }}" >> $GITHUB_ENV
           echo "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=${{ secrets.AUTHDOMAIN }}" >> $GITHUB_ENV
