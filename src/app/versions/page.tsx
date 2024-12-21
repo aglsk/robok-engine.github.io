@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Versions() {
   const [versions, setVersions] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchVersions = async () => {
@@ -32,6 +33,8 @@ export default function Versions() {
         setVersions(versionsData);
       } catch (error) {
         console.error("Erro ao buscar dados das versões:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -39,68 +42,74 @@ export default function Versions() {
   }, []);
 
   return (
-    <div>
-      <Card className="m-4 flex flex-col justify-center items-center">
+    <div className="p-4">
+      {/* Card de download principal */}
+      <Card className="flex flex-col justify-center items-center mb-8 shadow-lg border">
         <CardHeader>
-          <h1 className="text-4xl mt-10 font-bold"> Download Robok</h1>
+          <h1 className="text-4xl mt-10 font-bold text-center">Download Robok</h1>
+          <p className="mt-2 text-center text-gray-600">
+            Faça o download das versões mais recentes do Robok Engine.
+          </p>
         </CardHeader>
 
         <CardContent>
-          <div className="flex flex-col gap-2 justify-center content-center items-center">
-            <CardTitle>
-              <h3 className="font-semibold mb-4 text-2xl">Latest versions</h3>
-            </CardTitle>
-            <div className="flex gap-6 justify-center mb-10 items-center">
-              <a href="#">
-                <Button>
-                  <div className="flex items-center p-2 justify-center gap-2">
-                    <span className="text-xl">Stable</span>
-                    <FileBox />
-                  </div>
-                </Button>
-              </a>
-              <a href="#">
-                <Button variant={"outline"}>
-                  <div className="flex items-center p-2 justify-center gap-2">
-                    <span className="text-xl">Latest</span>
-                    <Rocket />
-                  </div>
-                </Button>
-              </a>
-            </div>
+          <div className="flex flex-wrap gap-4 justify-center items-center mt-6">
+            <a href="#" aria-label="Download versão estável">
+              <Button>
+                <div className="flex items-center p-2 justify-center gap-2">
+                  <span className="text-xl">Stable</span>
+                  <FileBox />
+                </div>
+              </Button>
+            </a>
+            <a href="#" aria-label="Download versão mais recente">
+              <Button variant="outline">
+                <div className="flex items-center p-2 justify-center gap-2">
+                  <span className="text-xl">Latest</span>
+                  <Rocket />
+                </div>
+              </Button>
+            </a>
           </div>
         </CardContent>
       </Card>
 
-      <Card className="flex flex-col justify-center items-center m-4">
-        <CardHeader>
-          <h1 className="text-xl text-center font-bold">Versões Disponíveis</h1>
-          <p>Lista de versões disponíveis para download.</p>
+      {/* Card com a tabela de versões */}
+      <Card className="flex flex-col justify-center items-center shadow-lg border">
+        <CardHeader className="text-center">
+          <h1 className="text-2xl font-bold">Versões Disponíveis</h1>
+          <p className="text-gray-600">Lista de versões disponíveis para download.</p>
         </CardHeader>
 
-        <CardContent className="flex w-full">
-          <Table className="flex w-full flex-col items-center">
-            <TableCaption>Versões disponíveis.</TableCaption>
+        <CardContent className="w-full">
+          <Table className="w-full text-sm text-left text-gray-700 mt-4">
+            <TableCaption className="text-gray-500">Versões disponíveis para download.</TableCaption>
             <TableHeader>
-              <TableRow>
+              <TableRow className="bg-gray-100">
                 <TableHead>Versão</TableHead>
                 <TableHead>Desenvolvedor</TableHead>
                 <TableHead>Download</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              {versions.length > 0 ? (
+              {loading ? (
+                <TableRow>
+                  <TableCell colSpan={3} className="text-center py-4">
+                    Carregando dados...
+                  </TableCell>
+                </TableRow>
+              ) : versions.length > 0 ? (
                 versions.map((version) => (
-                  <TableRow key={version.id}>
+                  <TableRow key={version.id} className="hover:bg-gray-50">
                     <TableCell className="font-medium">{version.version}</TableCell>
                     <TableCell>{version.build}</TableCell>
-
                     <TableCell>
                       <a
                         href={version.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-blue-500 underline"
+                        className="text-blue-600 hover:text-blue-800 underline"
+                        aria-label={`Download versão ${version.version}`}
                       >
                         <Download className="inline w-4 h-4 mr-1" /> Click
                       </a>
@@ -109,8 +118,8 @@ export default function Versions() {
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={4} className="text-center">
-                    Carregando dados...
+                  <TableCell colSpan={3} className="text-center py-4">
+                    Nenhuma versão disponível no momento.
                   </TableCell>
                 </TableRow>
               )}
