@@ -50,19 +50,28 @@ export default function Versions() {
         </CardHeader>
 
         <CardContent>
-          <div className="flex flex-wrap gap-4 justify-center items-center mt-6">
-            <Button>
-              <div className="flex items-center p-2 justify-center gap-2">
-                <span className="text-xl">Stable</span>
-                <FileBox />
-              </div>
-            </Button>
-            <Button variant="outline">
-              <div className="flex items-center p-2 justify-center gap-2">
-                <span className="text-xl">Latest</span>
-                <Rocket />
-              </div>
-            </Button>
+          <div className="flex flex-col gap-2 justify-center content-center items-center">
+            <CardTitle>
+              <h3 className="font-semibold mb-4 text-2xl">Latest versions</h3>
+            </CardTitle>
+            <div className="flex gap-6 justify-center mb-10 items-center">
+              <a href="#">
+                <Button>
+                  <div className="flex items-center p-2 justify-center gap-2">
+                    <span className="text-xl">Stable</span>
+                    <FileBox />
+                  </div>
+                </Button>
+              </a>
+              <a href="#">
+                <Button variant={"outline"}>
+                  <div className="flex items-center p-2 justify-center gap-2">
+                    <span className="text-xl">Latest</span>
+                    <Rocket />
+                  </div>
+                </Button>
+              </a>
+            </div>
           </div>
         </CardContent>
       </Card>
