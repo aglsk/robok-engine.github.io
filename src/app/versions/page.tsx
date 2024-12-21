@@ -15,6 +15,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Download, FileBox, Rocket } from "lucide-react";
 import { db } from "../../../firebaseConfig";
 import { Button } from "@/components/ui/button";
+import { CardTitle } from "@/components/ui/card";
 
 export default function Versions() {
   const [versions, setVersions] = useState<any[]>([]);
