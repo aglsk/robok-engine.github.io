@@ -11,7 +11,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Download, FileBox, Rocket } from "lucide-react";
 import { db } from "../../../firebaseConfig";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ export default function Versions() {
         }));
         setVersions(versionsData);
       } catch (error) {
-        console.error("Erro ao buscar dados das versões:", error);
+        console.error("Error fetching version data:", error);
       } finally {
         setLoading(false);
       }
@@ -43,51 +43,44 @@ export default function Versions() {
 
   return (
     <div className="p-4">
-      {/* Card de download principal */}
+      {/* Card for main download options */}
       <Card className="flex flex-col justify-center items-center mb-8 shadow-lg border">
         <CardHeader>
           <h1 className="text-4xl mt-10 font-bold text-center">Download Robok</h1>
-          <p className="mt-2 text-center text-gray-600">
-            Faça o download das versões mais recentes do Robok Engine.
-          </p>
         </CardHeader>
 
         <CardContent>
           <div className="flex flex-wrap gap-4 justify-center items-center mt-6">
-            <a href="#" aria-label="Download versão estável">
-              <Button>
-                <div className="flex items-center p-2 justify-center gap-2">
-                  <span className="text-xl">Stable</span>
-                  <FileBox />
-                </div>
-              </Button>
-            </a>
-            <a href="#" aria-label="Download versão mais recente">
-              <Button variant="outline">
-                <div className="flex items-center p-2 justify-center gap-2">
-                  <span className="text-xl">Latest</span>
-                  <Rocket />
-                </div>
-              </Button>
-            </a>
+            <Button>
+              <div className="flex items-center p-2 justify-center gap-2">
+                <span className="text-xl">Stable</span>
+                <FileBox />
+              </div>
+            </Button>
+            <Button variant="outline">
+              <div className="flex items-center p-2 justify-center gap-2">
+                <span className="text-xl">Latest</span>
+                <Rocket />
+              </div>
+            </Button>
           </div>
         </CardContent>
       </Card>
 
-      {/* Card com a tabela de versões */}
+      {/* Card with version table */}
       <Card className="flex flex-col justify-center items-center shadow-lg border">
         <CardHeader className="text-center">
-          <h1 className="text-2xl font-bold">Versões Disponíveis</h1>
-          <p className="text-gray-600">Lista de versões disponíveis para download.</p>
+          <h1 className="text-2xl font-bold">Available Versions</h1>
+          <p>List of available versions for download.</p>
         </CardHeader>
 
         <CardContent className="w-full">
           <Table className="w-full text-sm text-left text-gray-700 mt-4">
-            <TableCaption className="text-gray-500">Versões disponíveis para download.</TableCaption>
+            <TableCaption>Available versions for download.</TableCaption>
             <TableHeader>
               <TableRow className="bg-gray-100">
-                <TableHead>Versão</TableHead>
-                <TableHead>Desenvolvedor</TableHead>
+                <TableHead>Version</TableHead>
+                <TableHead>Developer</TableHead>
                 <TableHead>Download</TableHead>
               </TableRow>
             </TableHeader>
@@ -95,7 +88,7 @@ export default function Versions() {
               {loading ? (
                 <TableRow>
                   <TableCell colSpan={3} className="text-center py-4">
-                    Carregando dados...
+                    Loading data...
                   </TableCell>
                 </TableRow>
               ) : versions.length > 0 ? (
@@ -109,7 +102,7 @@ export default function Versions() {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:text-blue-800 underline"
-                        aria-label={`Download versão ${version.version}`}
+                        aria-label={`Download version ${version.version}`}
                       >
                         <Download className="inline w-4 h-4 mr-1" /> Click
                       </a>
@@ -119,7 +112,7 @@ export default function Versions() {
               ) : (
                 <TableRow>
                   <TableCell colSpan={3} className="text-center py-4">
-                    Nenhuma versão disponível no momento.
+                    No versions available at the moment.
                   </TableCell>
                 </TableRow>
               )}
