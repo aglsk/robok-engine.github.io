@@ -55,7 +55,7 @@ export function Sidebar() {
                                 </div>
 
                                 <Link
-                                    href="/index.tsx"
+                                    href="/app"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
