@@ -44,7 +44,7 @@ export function Sidebar() {
 
                                 <div className="flex items-center  gap-4">
                                     <Link
-                                        href="#"
+                                        href="/"
                                         className="flex h-10 w-10 bg-primary rounded-xl text-lg 
                                         items-center justify-center text-primary-foreground md:text-base"
                                         prefetch={false} >
