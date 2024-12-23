@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <div className="p-8">
       <h1 className="text-5xl font-extrabold text-center mb-10">
-        About Robok
+        About
       </h1>
 
       <p className="text-lg text-center text-gray-600 mb-12">
