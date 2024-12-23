@@ -89,9 +89,10 @@ export default function CollabsPage() {
 
   return (
     <div className="p-8">
-      <h1 className="text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500">
-        Our Amazing Collaborators
+      <h1 className="text-5xl font-extrabold text-center mb-10">
+      Our Amazing Collaborators
       </h1>
+      
       <p className="text-lg text-center text-gray-600 mb-12">
         Meet the people who made this project possible! 🌟
       </p>
