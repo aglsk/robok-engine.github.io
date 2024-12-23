@@ -3,7 +3,7 @@
 export default function AboutPage() {
   return (
     <div className="p-8">
-      <h1 className="text-5xl font-extrabold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-teal-500">
+      <h1 className="text-5xl font-extrabold text-center mb-10">
         About Robok
       </h1>
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
         <p className="text-lg text-gray-700 text-center">
           Whether you're an experienced game developer or just getting started, Robok offers a robust and intuitive environment to turn your ideas into reality. <br />
           <a
-            href="/get-started"
+            href="/versions"
             className="text-teal-500 font-semibold underline hover:text-teal-700"
           >
             Learn more and get started here.
