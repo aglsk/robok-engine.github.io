@@ -55,7 +55,7 @@ export function Sidebar() {
                                 </div>
 
                                 <Link
-                                    href="#"
+                                    href="/"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -64,7 +64,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/versions"
                                     className="flex items-center gap-4 px-2.5
                                      text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -73,7 +73,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/docs"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -82,7 +82,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/structure"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -91,7 +91,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/build"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -100,7 +100,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/versions"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -109,7 +109,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/about"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -118,7 +118,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/collabs"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
@@ -127,7 +127,7 @@ export function Sidebar() {
                                 </Link>
 
                                 <Link
-                                    href="#"
+                                    href="/projects"
                                     className="flex items-center gap-4 px-2.5 
                                     text-muted-foreground hover:text-foreground"
                                     prefetch={false} >
